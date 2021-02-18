@@ -1,9 +1,11 @@
 # https://hub.docker.com/r/cwaffles/openpose
-FROM nvidia/cuda:11.2.1-cudnn8-devel
+FROM nvidia/cuda:10.0-cudnn7-devel
 
-RUN apt-get update && apt-get install -y --no-install-recommends \
+#get deps
+RUN apt-get update && \
+DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
-libgoogle-glog-dev libboost-all-dev libhdf5-dev libatlas-base-dev
+libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #for python api
 RUN pip3 install numpy opencv-python 
