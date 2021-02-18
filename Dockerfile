@@ -8,7 +8,7 @@ python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libo
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #for python api
-RUN pip install --upgrade setuptools
+RUN pip3 install --upgrade setuptools
 RUN pip3 install numpy opencv-python 
 
 #replace cmake as old version has CUDA variable bugs
