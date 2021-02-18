@@ -1,6 +1,8 @@
 # https://hub.docker.com/r/cwaffles/openpose
 FROM nvidia/cuda:11.2.1-cudnn8-devel
 
+RUN printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+
 #get deps
 RUN apt-get update && apt-get upgrade -y \
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
