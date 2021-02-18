@@ -1,5 +1,5 @@
 # https://hub.docker.com/r/cwaffles/openpose
-FROM nvidia/cuda:11.2-cudnn7-devel
+FROM nvidia/cuda:11.2.1-cudnn8-devel
 
 #get deps
 RUN apt-get update && \
