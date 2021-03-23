@@ -9,6 +9,7 @@ libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-
 
 #for python api
 RUN pip3 install --upgrade setuptools
+RUN pip install --upgrade setuptools
 RUN pip3 install numpy
 RUN pip3 install opencv-python
 
