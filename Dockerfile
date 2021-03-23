@@ -2,8 +2,7 @@
 FROM nvidia/cuda:10.0-cudnn7-devel
 
 #get deps
-RUN apt-get update && \
-DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends apt-utils\
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils\
 python3-dev python-pip git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
