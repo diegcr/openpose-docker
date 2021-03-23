@@ -8,7 +8,8 @@ python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libo
 libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
 
 #for python api
-RUN pip3 install --upgrade setuptools --user python
+RUN pip3 install --upgrade setuptools
+RUN pip3 install neuralpy
 RUN pip3 install numpy
 RUN pip3 install opencv-python
 
