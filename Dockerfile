@@ -5,11 +5,10 @@ FROM nvidia/cuda:10.0-cudnn7-devel
 RUN apt-get update && \
 DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
 python3-dev python3-pip git g++ wget make libprotobuf-dev protobuf-compiler libopencv-dev \
-libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev
+libgoogle-glog-dev libboost-all-dev libcaffe-cuda-dev libhdf5-dev libatlas-base-dev setuptools
 
 #for python api
 RUN pip3 install --upgrade setuptools
-RUN pip3 install neuralpy
 RUN pip3 install numpy
 RUN pip3 install opencv-python
 
