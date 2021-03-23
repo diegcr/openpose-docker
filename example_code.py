@@ -5,10 +5,10 @@ import cv2
 import os
 from sys import platform
 import argparse
-import pyopenpose as op
+
 
 try:
-    """
+
     # Import Openpose (Windows/Ubuntu/OSX)
     dir_path = os.path.dirname(os.path.realpath(__file__))
     try:
@@ -27,7 +27,6 @@ try:
     except ImportError as e:
         print('Error: OpenPose library could not be found. Did you enable `BUILD_PYTHON` in CMake and have this Python script in the right folder?')
         raise e
-    """
     # Flags
     parser = argparse.ArgumentParser()
     parser.add_argument("--image_path", default="../../examples/media/COCO_val2014_000000000192.jpg", help="Process an image. Read all standard formats (jpg, png, bmp, etc.).")
